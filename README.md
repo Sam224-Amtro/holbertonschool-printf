@@ -12,6 +12,7 @@ The objective is to manipulate structures, function pointers, and argument parsi
 - [Project Structure](#project-structure)
 - [How to Compile](#how-to-compile)
 - [Manual Page](#manual-page)
+- [Manual Page](#manual-page)
 - [Usage Examples](#usage-examples)
 - [Limitations](#limitations)
 - [Author](#author)
@@ -68,6 +69,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ---
 
+## How to Compile
 ## How to Compile
 
 You can compile all source files using `gcc`:
