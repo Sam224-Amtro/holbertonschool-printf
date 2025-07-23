@@ -1,28 +1,45 @@
-# Printf Function Project
+# Project : _Printf Function
 
-A simplified reimplementation of the function `printf`. This project demonstrates key C concepts such as variadic functions, function pointers, and structure use.
-
+This project replicates the standard `printf` function using variadic functions in C.  
+The objective is to manipulate structures, function pointers, and argument parsing dynamically.
 ---
 
 ## Table of Contents
 
-- [Features]
+- [Features](#features)
+- [Requirements](#requirements)
 - [Supported Format Specifiers](#supported-format-specifiers)
 - [Project Structure](#project-structure)
 - [How to Compile](#how-to-compile)
-- [Manual Page](#Manual-page)
+- [Manual Page](#manual-page)
 - [Usage Examples](#usage-examples)
 - [Limitations](#limitations)
 - [Author](#author)
 
 ---
 
+## Requirements
+
+- All files will be compiled on Ubuntu 20.04 LTS with :
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+```
+- All files must end with a new line.
+- A README.md at the root of the project.
+- The code must follow the Betty coding style.
+- No more than 5 functions per file.
+- Global variable are not allowed.
+- The prototypes of all functions must be included in a header file named main.h.
+- All header files must be include guarded.
+
+---
 ## Features
 
-- Handles a subset of format specifiers (`%c`, `%s`, `%d`, `%i`, and `%%`)
+- Support a subset of format specifiers (`%c`, `%s`, `%d`, `%i`, and `%%`)
 - Clean modular structure using function pointers and `struct` dispatch
 - Graceful handling of null strings
-- Mimics the behavior of standard `printf` in a simplified way
+- Simplified mimic of the standard printf behavior
 
 ---
 
@@ -51,12 +68,12 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 
 ---
 
-## 🛠️ How to Compile
+## How to Compile
 
 You can compile all source files using `gcc`:
 
 ```bash
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ```
 ---
 
@@ -64,7 +81,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 To open the manual, use the following command : 
 ```bash 
-man ./man_3_printf
+cat man_3_printf
 ```
 ---
 
