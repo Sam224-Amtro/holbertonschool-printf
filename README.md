@@ -2,6 +2,7 @@
 
 This project replicates the standard `printf` function using variadic functions in C.  
 The objective is to manipulate structures, function pointers, and argument parsing dynamically.
+
 ---
 
 ## Table of Contents
