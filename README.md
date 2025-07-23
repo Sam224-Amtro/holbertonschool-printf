@@ -70,7 +70,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ---
 
 ## How to Compile
-## How to Compile
 
 You can compile all source files using `gcc`:
 
