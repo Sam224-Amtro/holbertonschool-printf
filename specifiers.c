@@ -4,7 +4,10 @@
 int print_int_helper(unsigned int num);
 
 /**
- * print_char - Prints a single character from va_list
+ * print_char - Prints a single character from the argument list.
+ * @arguments: A va_list containing the character to print.
+ *
+ * Return: 1 if the character is printed successfully, -1 on error.
  */
 int print_char(va_list arguments)
 {
@@ -17,7 +20,10 @@ int print_char(va_list arguments)
 }
 
 /**
- * print_string - Prints a string from va_list
+ * print_string - Prints a string from the argument list.
+ * @arguments: A va_list containing the string to print.
+ *
+ * Return: The number of characters printed, or -1 on error.
  */
 int print_string(va_list arguments)
 {
@@ -38,7 +44,10 @@ int print_string(va_list arguments)
 	return (counter);
 }
 /**
- * print_percent - Prints an percent from va_list
+ * print_percent - Prints the '%' character.
+ * @arguments: A va_list (not used in this function).
+ *
+ * Return: 1 if the percent sign is printed successfully, -1 on error.
  */
 int print_percent(va_list arguments)
 {
@@ -51,7 +60,10 @@ int print_percent(va_list arguments)
 }
 
 /**
- * print_int - Prints an integer from va_list
+ * print_integer - Prints an integer from the argument list.
+ * @arguments: A va_list containing the integer to print.
+ *
+ * Return: The number of characters printed, or -1 on error.
  */
 int print_integer(va_list arguments)
 {
