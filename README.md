@@ -6,11 +6,11 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 
 ## Table of Contents
 
-- [Features]
+- [Features](#features)
 - [Supported Format Specifiers](#supported-format-specifiers)
 - [Project Structure](#project-structure)
 - [How to Compile](#how-to-compile)
-- [Manual Page](#Manual-page)
+- [Manual Page](#manual-page)
 - [Usage Examples](#usage-examples)
 - [Limitations](#limitations)
 - [Author](#author)
@@ -51,7 +51,7 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 
 ---
 
-## 🛠️ How to Compile
+## How to Compile
 
 You can compile all source files using `gcc`:
 
