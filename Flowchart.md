@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Start of printf] --> B{Le format est-il nul}
     B -- Yes --> C[Retourner -1]
@@ -20,3 +21,4 @@ flowchart TD
     F -- Non --> O[Terminer les arguments variadiques]
     O --> P[Retourner count]
     P --> Q[fin de printf]
+```
