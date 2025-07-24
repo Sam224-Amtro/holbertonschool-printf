@@ -5,17 +5,18 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 - [Features](#features)
 - [Supported Format Specifiers](#supported-format-specifiers)
 - [Project Structure](#project-structure)
+- [Flowchart](#flowchart)
 - [How to Compile](#how-to-compile)
 - [How to execute](#how-to-execute)
 - [Manual Page](#Manual-page)
 - [Usage Examples](#usage-examples)
 - [Limitations](#limitations)
-- [Author](#author)
+- [Authors](#authors)
 ---
 ## Features
-- Handles a subset of format specifiers (`%c`, `%s`, `%d`, `%i`, and `%%`)
+- Handles of format specifiers (`%c`, `%s`, `%d`, `%i`, and `%%`)
 - Clean modular structure using function pointers and `struct` dispatch
-- Graceful handling of null strings
+- Handling of null strings
 - Mimics the behavior of standard `printf` in a simplified way
 ---
 ## Supported Format Specifiers
@@ -34,7 +35,33 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 | `_printf.c`        | Core implementation of `_printf` |
 | `specifiers.c`     | Returns array of supported specifiers |
 | `_putchar.c`       | Wrapper for `write` to output characters |
-| `main.c`           | Sample test cases |
+---
+## Flowchart
+
+```mermaid
+flowchart TD
+    A[Start of printf] --> B{Le format est-il nul}
+    B -- Yes --> C[Retourner -1]
+    B -- Non --> D[Démarrer les arguments variadiques]
+    D --> E[Initialiser k = 0, count = 0]
+    E --> F{le format à k n'est pas la fin}
+
+    F -- Oui --> G{Le format à k est-il un signe de pourcentage ?}
+    G -- Non --> H[Imprimer le caractère en utilisant putchar\nIncrémenter le nombre]
+    H --> I[Increment k]
+    I --> F
+
+    G -- Oui --> J{Le caractère suivant est la fin}
+    J -- Oui --> K[Retourner -1]
+    J -- Non --> L[Increment k]
+    L --> M[Appeler match_specifier\nAjouter le résultat au décompte]
+    M --> N[Increment k]
+    N --> F
+
+    F -- Non --> O[Terminer les arguments variadiques]
+    O --> P[Retourner count]
+    P --> Q[fin de printf]
+```
 ---
 ## How to Compile
 You can compile all source files using `gcc`:
@@ -50,7 +77,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ## Manual page
 To open the manual, use the following command :
 ```bash
-cat -e man_3_printf
+man ./man_3_printf
 ```
 ---
 ## Usage Examples
