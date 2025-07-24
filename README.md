@@ -2,10 +2,11 @@
 A simplified reimplementation of the function `printf`. This project demonstrates key C concepts such as variadic functions, function pointers, and structure use.
 ---
 ## Table of Contents
-- [Features]
+- [Features](#features)
 - [Supported Format Specifiers](#supported-format-specifiers)
 - [Project Structure](#project-structure)
 - [How to Compile](#how-to-compile)
+- [How to execute](#how-to-execute)
 - [Manual Page](#Manual-page)
 - [Usage Examples](#usage-examples)
 - [Limitations](#limitations)
@@ -32,20 +33,24 @@ A simplified reimplementation of the function `printf`. This project demonstrate
 | `main.h`           | Header file with declarations and `type_specifier` struct |
 | `_printf.c`        | Core implementation of `_printf` |
 | `specifiers.c`     | Returns array of supported specifiers |
-| `handlers.c`       | Individual handlers for each format specifier |
 | `_putchar.c`       | Wrapper for `write` to output characters |
 | `main.c`           | Sample test cases |
 ---
-## :hammer_and_wrench: How to Compile
+## How to Compile
 You can compile all source files using `gcc`:
 ```bash
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+```
+---
+## How to execute
+```bash
+./a.aout
 ```
 ---
 ## Manual page
 To open the manual, use the following command :
 ```bash
-man ./man_3_printf
+cat -e man_3_printf
 ```
 ---
 ## Usage Examples
@@ -68,8 +73,8 @@ Undefined behavior for unsupported format specifiers (prints %x if %x is unknown
 No float or hex support (%f, %x, %X, %u, etc.)
 ---
 
-
-
+## Authors
+Joevin & Sanoussy
 
 
 
